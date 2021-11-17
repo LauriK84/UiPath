@@ -64,7 +64,11 @@
       <Variable x:TypeArguments="x:String" Default="Lauri" Name="strName" />
       <Variable x:TypeArguments="x:Int32" Default="5" Name="intNumber" />
       <Variable x:TypeArguments="x:Double" Default="22.22" Name="dblNumber" />
-      <Variable x:TypeArguments="x:Boolean" Name="boolCondition" />
+      <Variable x:TypeArguments="x:Boolean" Name="boolCondition">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" Value="True" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="sd:DataTable" Name="dtFirstDataTable" />
       <Variable x:TypeArguments="x:String" Name="strDT" />
     </Sequence.Variables>
@@ -84,7 +88,7 @@
         <OutArgument x:TypeArguments="x:Boolean">[boolCondition]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
       </Assign.Value>
     </Assign>
     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[boolCondition.ToString]" />
